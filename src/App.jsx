@@ -44,7 +44,7 @@ function App() {
       setLoading(true); 
       try {
         const query = city.trim() ? city : `${coords.latitude},${coords.longitude}`;
-        const res = await fetch(`http://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_API_KEY}&q=${query}`, {
+        const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_API_KEY}&q=${query}`, {
           signal, 
         });
         const data = await res.json();
